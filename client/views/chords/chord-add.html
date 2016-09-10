@@ -1,0 +1,96 @@
+<button back-button>Back</button back-button>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Add Chord</h3>
+	</div>
+  
+	<div class="panel-body">
+        <form ng-submit="addChord()">
+            
+            <div class="row">
+        		<div class="col-xs-12">
+       				<div class="form-group">
+        				<label>Name</label>
+        				<input type="text" class="form-control" ng-model="chord.name" placeholder="Chord">
+        			</div>
+                </div><!-- .col-xs-12 -->
+            </div><!-- .row -->
+
+            <div class="row">
+                <div class="col-xs-2">
+        			<div class="form-group">
+        				<label>6 String</label>
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].sixth.fret" placeholder="Fret">
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].sixth.finger" placeholder="Finger">
+        			</div>
+                </div><!-- .col-xs-2 -->
+                
+                <div class="col-xs-2">
+        			<div class="form-group">
+        				<label>5 String</label>
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].fifth.fret" placeholder="Fret">
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].fifth.finger" placeholder="Finger">
+        			</div>
+                </div><!-- .col-xs-2 -->
+
+                <div class="col-xs-2">
+        			<div class="form-group">
+        				<label>4 String</label>
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].fourth.fret" placeholder="Fret">
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].fourth.finger" placeholder="Finger">
+        			</div>
+                </div><!-- .col-xs-2 -->
+
+                <div class="col-xs-2">
+        			<div class="form-group">
+        				<label>3 String</label>
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].third.fret" placeholder="Fret">
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].third.finger" placeholder="Finger">
+        			</div>
+                </div><!-- .col-xs-2 -->
+
+                <div class="col-xs-2">
+        			<div class="form-group">
+        				<label>2 String</label>
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].second.fret" placeholder="Fret">
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].second.finger" placeholder="Finger">
+        			</div>
+                </div><!-- .col-xs-2 -->
+
+                <div class="col-xs-2">
+        			<div class="form-group">
+        				<label>1 String</label>
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].first.fret" placeholder="Fret">
+        				<input type="text" class="form-control" ng-model="chord.fingering[0].first.finger" placeholder="Finger">
+        			</div>
+                </div><!-- .col-xs-2 -->
+            </div><!-- .row -->
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label for="chordDiagramImage">Chord Diagram Image</label>
+                        <input 
+                            type="file" 
+                            class="form-control" 
+                            id="chordDiagramImage" 
+                            ngf-select
+                            ng-model="file"
+                            name="file"
+                            ngf-pattern="image/*"
+                            accept="image/*"
+                        >
+                    </div>
+                </div>
+            </div><!-- .row -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-default pull-right">Submit</button>
+                </div>
+            </div><!-- .row -->
+        
+        </form>
+	</div><!-- .panel-body -->
+</div><!-- .panel -->

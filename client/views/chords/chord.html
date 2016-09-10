@@ -1,0 +1,63 @@
+<button back-button>Back</button back-button>
+
+<!-- <div>
+	<div ng-repeat="chord in chordList"><chord-diagram info="chord"></chord-diagram></div>
+</div> -->
+
+<div ng-init="getChords()">
+<table ng-repeat="chord in chordList" class="table table-striped">
+	<thead>
+		<th><h1>{{chord.name}}</h1></th>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td>String</td>
+			<td>Fret</td>
+			<td>Finger</td>
+			<td rowspan="7"><img width="200" height="200" ng-src="{{chord.diagram_image}}" class="img-responsive"></td>
+		</tr>
+
+		<tr>
+			<td>6th String</td>
+			<td>{{chord.fingering[0].sixth.fret}}</td>
+			<td>{{chord.fingering[0].sixth.finger}}</td>
+		</tr>
+
+		<tr>
+			<td>5th String</td>
+			<td>{{chord.fingering[0].fifth.fret}}</td>
+			<td>{{chord.fingering[0].fifth.finger}}</td>
+		</tr>
+
+		<tr>
+			<td>4th String</td>
+			<td>{{chord.fingering[0].fourth.fret}}</td>
+			<td>{{chord.fingering[0].fourth.finger}}</td>
+		</tr>
+
+		<tr>
+			<td>3rd String</td>
+			<td>{{chord.fingering[0].third.fret}}</td>
+			<td>{{chord.fingering[0].third.finger}}</td>
+		</tr>
+
+		<tr>
+			<td>2nd String</td>
+			<td>{{chord.fingering[0].second.fret}}</td>
+			<td>{{chord.fingering[0].second.finger}}</td>
+		</tr>
+
+		<tr>
+			<td>1st String</td>
+			<td>{{chord.fingering[0].first.fret}}</td>
+			<td>{{chord.fingering[0].first.finger}}</td>
+		</tr>
+
+		<tr class="pull-right">
+			<td><button class="btn btn-danger" ng-click="removeChord(chord._id)">Delete</button></td>
+		</tr>
+
+	</tbody>
+</table>
+</div>

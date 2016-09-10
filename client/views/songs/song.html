@@ -1,0 +1,42 @@
+<h1 class="text-center">{{song.title}}</h1>
+
+<button back-button>Back</button back-button>
+
+<div ng-init="getSong()">
+<table class="table">
+	<thead>
+		<th>{{song.title}}</th>
+	</thead>
+	
+	<tbody>
+		<tr ng-repeat="section in sections">
+			<form ng-submit="updateSong(section)">
+				<td>
+					<span ng-if="!section.isEditing">{{section.part}}</span>
+					<input type="text" ng-model="section.part" ng-value="section.part" ng-if="section.isEditing">
+				</td>
+				
+				<td>
+					<span ng-if="!section.isEditing">{{section.progression}}</span>
+					<input type="text" ng-model="section.progression" ng-value="section.progression" ng-if="section.isEditing">
+					</td>
+				
+				<td>
+					<button class="btn btn-default" type="button" ng-if="!section.isEditing" ng-click="toggle(section)">Edit</button>
+					<!--
+						which of these buttons is better?? 
+						<button class="btn btn-default" type="submit" ng-if="section.isEditing" ng-click="toggle(section)">Save</button> 
+					-->
+					<button class="btn btn-default" type="button" ng-if="section.isEditing" ng-click="updateSong(section)">Save</button>
+				</td>
+			</form>
+		</tr>
+		<tr>
+			<td><div id="form-group-append"></div></td>
+		</tr>
+		<tr>
+			<td><add-song-section-button></add-song-section-button></td>
+		</tr>     
+	</tbody>
+</table>
+</div>

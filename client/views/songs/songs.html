@@ -1,0 +1,10 @@
+<div class="row" ng-repeat="song in songList">
+	<div class="col-xs-4">
+		<label>Name: </label><a ng-href="#/songs/{{song._id}}">{{song.title}}</a>
+	</div>
+
+	<div class="col-xs-4">
+		<a class="btn btn-primary" ng-href="#/songs/{{song._id}}">More Info</a>
+		<button type="button" class="btn btn-danger" ng-click="removeChord(song._id)">Delete</button>
+	</div>
+</div>

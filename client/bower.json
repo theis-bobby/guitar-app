@@ -1,0 +1,21 @@
+{
+  "name": "client",
+  "authors": [
+    "theisbobby <bobbytheis17@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
